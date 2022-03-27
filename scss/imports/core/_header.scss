@@ -1,0 +1,152 @@
+// css header
+.main__header{
+        height: var(--height-header);
+        height: 80px;
+        line-height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white-cl;
+        .main__header-logo{
+            height: 100%;
+            h1{
+                display: none;
+            }
+        }
+        .main__header-menu{
+            height: 100%;
+            ul{
+                .text-home{
+                    color: $yellow-cl;
+                    text-shadow: none;
+                }
+                text-decoration: none;
+                display: flex;
+            }
+            li a {
+                display: inline-block;
+                padding: 0 30px;
+                color: $white-cl;
+                text-transform: $upcaper;
+                text-shadow: 2px 2px $black-cl;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        .main__header-right{
+
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+            >div{
+                padding: 0 3px;
+            }
+            .icon-drop{
+                display: flex;
+                i{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .lang{
+                height: 80px;
+                text-shadow: 2px 2px $black-cl;
+                &:hover{
+                    cursor: pointer;
+                    .btn-lang{
+                        display: block;
+                    }
+                }
+                .btn-lang{
+                    li{
+                        text-shadow: none;
+                    }
+                    display: none;
+                    ul{
+                        line-height: 30px;
+                        background-color: $white-cl;
+                        width: 80px;
+                        text-align: center;
+                        position: absolute;
+                        top: 80%;
+                        right: 3%;
+                        li{
+                            color: $black-cl;
+                            &:hover{
+                                background-color: $ccc-cl;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn__menu{
+                position: relative;
+                width: 40px;
+                height: 22px;
+                z-index: 300;
+                margin: 0 10px;
+                &:hover{
+                    cursor: pointer;
+                }
+                span{
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $yellow-cl;
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%))
+                }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $yellow-cl;
+                        position: absolute;
+                    }
+                    &::before{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $yellow-cl;
+                        position: absolute;
+                        bottom: 0;
+                    }  
+            }
+        }
+        
+}
+
+
+@include lg{
+    .btn__menu{
+        display: none;
+    }
+}
+
+@include md{
+    .btn__menu{
+        display: none;
+    }
+}
+
+@include sm{
+    .main__header-menu{
+        display: none;
+    }
+    .btn__menu{
+        display: block;
+    }
+}
+

@@ -1,0 +1,95 @@
+// css footer
+.footer__main{
+    margin-top: 80px;
+    background-color: $black-cl;
+    width: 100%;
+    height: 55px;
+    .container__footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .footer__main-left{
+            p{
+                color: $white-cl;
+                font-size: 12px;
+                line-height: 20px;
+                opacity: 0.8;
+            }
+        }
+        .footer__main-mid{
+            
+        }
+        .footer__main-right{
+            .btn__back{
+                text-transform: $upcaper;
+                a{
+                    text-decoration: none;
+                    color: $white-cl;
+                    font-size: $p__fs;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include sm{
+    .footer__main{
+        background-color: $black-cl;
+        width: 100%;
+        height: 55px;
+        .container__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            .footer__main-left{
+                p{
+                    color: $white-cl;
+                    font-size: 10px;
+                    line-height: 16px;
+                }
+            }
+            .footer__main-mid{
+                .logo{
+                    img{
+                        width: 80%;
+                        height: 80%;
+                    }
+                }
+            }
+            .footer__main-right{
+                .btn__back{
+                    text-transform: $upcaper;
+                    a{
+                        font-size: $p__fs-sm;
+                        text-decoration: none;
+                        color: $white-cl;
+                        &:hover{
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include xxs{
+    .footer__main{
+        .container__footer{
+            .footer__main-mid{
+                .logo{
+                    img{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
